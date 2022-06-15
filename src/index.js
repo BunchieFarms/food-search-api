@@ -16,6 +16,9 @@ app.post('/api/searchFood', (req, res) => {
         .then((data) => {
             const response = new FoodItems(data.totalHits, data.currentPage, data.totalPages, data.foods);
             res.send(response);
+        })
+        .catch((err) => {
+            res.send(err);
         });
 });
 
