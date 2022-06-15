@@ -60,7 +60,7 @@ class FoodDetails {
 class FoodNutrients {
     constructor(nutrientName, unitName, derivationDescription, value, nutrientNumber) {
         this.nutrientName = nutrientName;
-        this.unitName = unitName;
+        this.unitName = unitName === 'KCAL' ? 'CAL' : unitName;
         this.derivationDescription = derivationDescription;
         this.value = value;
         this.nutrientNumber = nutrientNumber;
